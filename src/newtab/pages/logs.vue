@@ -1,6 +1,6 @@
 <template>
   <div class="container pt-8 pb-4 logs-list">
-    <h1 class="text-2xl font-semibold mb-6">日志</h1>
+    <h1 class="text-2xl font-semibold mb-6">记录</h1>
     <logs-filters
       :sorts="sortsBuilder"
       :filters="filtersBuilder"
@@ -60,11 +60,10 @@
       class="fixed right-0 bottom-0 m-5 shadow-xl space-x-2"
     >
       <ui-button @click="selectAllLogs">
-        {{ selectedLogs.length >= logs.length ? 'Deselect' : 'Select' }}
-        all
+        {{ selectedLogs.length >= logs.length ? '取消全选' : '全选' }}
       </ui-button>
       <ui-button variant="danger" @click="deleteSelectedLogs">
-        Delete selected logs ({{ selectedLogs.length }})
+        删除选中记录 ({{ selectedLogs.length }})
       </ui-button>
     </ui-card>
     <ui-modal v-model="exportDataModal.show">

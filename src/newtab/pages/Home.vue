@@ -19,7 +19,7 @@
         </div>
         <div>
           <div class="mb-2 flex items-center justify-between">
-            <p class="font-semibold inline-block">日志</p>
+            <p class="font-semibold inline-block">记录</p>
             <router-link
               to="/logs"
               class="text-gray-600 text-sm dark:text-gray-200"

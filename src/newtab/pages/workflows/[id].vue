@@ -27,7 +27,7 @@
       <div class="absolute px-3 rounded-lg bg-white z-10 left-0 m-4 top-0">
         <ui-tabs v-model="activeTab" class="border-none h-full space-x-1">
           <ui-tab value="editor">编辑器</ui-tab>
-          <ui-tab value="logs">日志</ui-tab>
+          <ui-tab value="logs">记录</ui-tab>
           <ui-tab value="running" class="flex items-center">
             流程执行
             <span

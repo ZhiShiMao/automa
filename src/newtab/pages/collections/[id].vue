@@ -61,7 +61,7 @@
             class="border-none h-full space-x-1"
           >
             <ui-tab value="flow">Flow</ui-tab>
-            <ui-tab value="logs">日志</ui-tab>
+            <ui-tab value="logs">记录</ui-tab>
             <ui-tab value="running">
               流程执行
               <span

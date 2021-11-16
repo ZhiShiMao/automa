@@ -106,7 +106,7 @@ const tabs = [
     path: '/collections',
   },
   {
-    name: '日志',
+    name: '记录',
     icon: 'riHistoryLine',
     path: '/logs',
   },
