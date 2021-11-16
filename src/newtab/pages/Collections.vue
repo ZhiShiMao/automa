@@ -73,7 +73,7 @@ function newCollection() {
     onConfirm: (name) => {
       Collection.insert({
         data: {
-          name: name || 'Unnamed',
+          name: name || '未命名',
           createdAt: Date.now(),
         },
       });

@@ -31,25 +31,25 @@
       <template #trigger>
         <ui-button>
           <v-remixicon name="riFilter2Line" class="mr-2 -ml-1" />
-          <span>Filters</span>
+          <span>筛选</span>
         </ui-button>
       </template>
       <div class="w-48">
-        <p class="flex-1 mb-2 font-semibold">Filters</p>
-        <p class="mb-2 text-sm text-gray-600">By status</p>
+        <p class="flex-1 mb-2 font-semibold">筛选</p>
+        <p class="mb-2 text-sm text-gray-600">通过状态筛选</p>
         <div class="grid grid-cols-2 gap-2">
           <ui-radio
             v-for="status in filterByStatus"
-            :key="status"
+            :key="status.id"
             :model-value="filters.byStatus"
-            :value="status"
+            :value="status.id"
             class="capitalize text-sm"
             @change="updateFilters('byStatus', $event)"
           >
-            {{ status }}
+            {{ status.name }}
           </ui-radio>
         </div>
-        <p class="mb-1 text-sm text-gray-600 mt-3">By date</p>
+        <p class="mb-1 text-sm text-gray-600 mt-3">通过日期筛选</p>
         <ui-select
           :model-value="filters.byDate"
           class="w-full"
@@ -76,12 +76,17 @@ defineProps({
 });
 const emit = defineEmits(['updateSorts', 'updateFilters']);
 
-const filterByStatus = ['all', 'success', 'stopped', 'error'];
+const filterByStatus = [
+  { id: 'all', name: '全部' },
+  { id: 'success', name: '成功' },
+  { id: 'stopped', name: '停止' },
+  { id: 'error', name: '错误' },
+];
 const filterByDate = [
-  { id: 0, name: 'All' },
-  { id: 1, name: 'Last day' },
-  { id: 7, name: 'Last 7 days' },
-  { id: 30, name: 'Last 30 days' },
+  { id: 0, name: '全部' },
+  { id: 1, name: '最近24小时' },
+  { id: 7, name: '最近7天' },
+  { id: 30, name: '最近30天' },
 ];
 const sortsList = [
   { id: 'name', name: '名称' },

@@ -95,7 +95,7 @@ function newWorkflow() {
     onConfirm: (name) => {
       Workflow.insert({
         data: {
-          name: name || 'Unnamed',
+          name: name || '未命名',
           createdAt: Date.now(),
         },
       });

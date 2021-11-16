@@ -10,7 +10,7 @@
           font-semibold
           bg-transparent
         "
-        @blur="updateCollection({ name: $event.target.value || 'Unnamed' })"
+        @blur="updateCollection({ name: $event.target.value || '未命名' })"
       />
       <div class="flex-grow"></div>
       <ui-button variant="accent" class="mr-4" @click="executeCollection">
