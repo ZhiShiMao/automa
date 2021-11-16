@@ -1,19 +1,15 @@
 <template>
   <div class="container pt-8 pb-4">
-    <h1 class="text-2xl font-semibold">Collections</h1>
-    <p class="text-gray-600 dark:text-gray-200">
-      Execute your workflows continuously
-    </p>
+    <h1 class="text-2xl font-semibold">集合</h1>
+    <p class="text-gray-600 dark:text-gray-200">持续执行工作流程</p>
     <div class="flex items-center my-6 space-x-4">
       <ui-input
         v-model="query"
         prepend-icon="riSearch2Line"
-        placeholder="Search..."
+        placeholder="搜索 ..."
         class="flex-1"
       />
-      <ui-button variant="accent" @click="newCollection">
-        New collection
-      </ui-button>
+      <ui-button variant="accent" @click="newCollection"> 创建集合 </ui-button>
     </div>
     <div
       v-if="Collection.query().count() === 0"
@@ -21,11 +17,9 @@
     >
       <img src="@/assets/svg/alien.svg" class="w-96" />
       <div class="ml-4">
-        <h1 class="text-2xl font-semibold max-w-md mb-6">
-          Oppss... It's looks like you don't have any collections.
-        </h1>
+        <h1 class="text-2xl font-semibold max-w-md mb-6">暂无任何集合</h1>
         <ui-button variant="accent" @click="newCollection">
-          New collection
+          创建集合
         </ui-button>
       </div>
     </div>
@@ -73,7 +67,7 @@ function executeCollection(collection) {
 }
 function newCollection() {
   dialog.prompt({
-    title: 'New collection',
+    title: '创建集合',
     placeholder: 'Collection name',
     okText: 'Add collection',
     onConfirm: (name) => {
@@ -88,9 +82,9 @@ function newCollection() {
 }
 function renameCollection({ id, name }) {
   dialog.prompt({
-    title: 'Rename collection',
+    title: '重命名集合',
     placeholder: 'Collection name',
-    okText: 'Rename',
+    okText: '重命名',
     inputValue: name,
     onConfirm: (newName) => {
       Collection.update({

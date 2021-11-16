@@ -3,7 +3,7 @@
     <ui-input
       :model-value="filters.query"
       prepend-icon="riSearch2Line"
-      placeholder="Search..."
+      placeholder="搜索 ..."
       class="flex-1"
       @change="updateFilters('query', $event)"
     />
@@ -19,7 +19,7 @@
       </ui-button>
       <ui-select
         :model-value="sorts.by"
-        placeholder="Sort by"
+        placeholder="排序"
         @change="updateSorts('by', $event)"
       >
         <option v-for="sort in sortsList" :key="sort.id" :value="sort.id">
@@ -84,8 +84,8 @@ const filterByDate = [
   { id: 30, name: 'Last 30 days' },
 ];
 const sortsList = [
-  { id: 'name', name: 'Name' },
-  { id: 'startedAt', name: 'Created date' },
+  { id: 'name', name: '名称' },
+  { id: 'startedAt', name: '创建日期' },
 ];
 
 function updateFilters(key, value) {

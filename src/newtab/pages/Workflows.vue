@@ -1,11 +1,11 @@
 <template>
   <div class="container pt-8 pb-4">
-    <h1 class="text-2xl font-semibold mb-6">Workflows</h1>
+    <h1 class="text-2xl font-semibold mb-6">流程</h1>
     <div class="flex items-center mb-6 space-x-4">
       <ui-input
         v-model="state.query"
         prepend-icon="riSearch2Line"
-        placeholder="Search..."
+        placeholder="搜索 ..."
         class="flex-1"
       />
       <div class="flex items-center workflow-sort">
@@ -18,7 +18,7 @@
             :name="state.sortOrder === 'asc' ? 'riSortAsc' : 'riSortDesc'"
           />
         </ui-button>
-        <ui-select v-model="state.sortBy" placeholder="Sort by">
+        <ui-select v-model="state.sortBy" placeholder="排序">
           <option v-for="sort in sorts" :key="sort.id" :value="sort.id">
             {{ sort.name }}
           </option>
@@ -26,21 +26,15 @@
       </div>
       <ui-button @click="importWorkflow">
         <v-remixicon name="riUploadLine" class="mr-2 -ml-1" />
-        Import workflow
+        导入流程
       </ui-button>
-      <ui-button variant="accent" @click="newWorkflow">
-        New workflow
-      </ui-button>
+      <ui-button variant="accent" @click="newWorkflow"> 新建流程 </ui-button>
     </div>
     <div v-if="Workflow.all().length === 0" class="py-12 flex items-center">
       <img src="@/assets/svg/alien.svg" class="w-96" />
       <div class="ml-4">
-        <h1 class="text-2xl font-semibold max-w-md mb-6">
-          Oppss... It's looks like you don't have any workflows.
-        </h1>
-        <ui-button variant="accent" @click="newWorkflow"
-          >New workflow</ui-button
-        >
+        <h1 class="text-2xl font-semibold max-w-md mb-6">暂无任何流程</h1>
+        <ui-button variant="accent" @click="newWorkflow">新建流程</ui-button>
       </div>
     </div>
     <div v-else class="grid gap-4 grid-cols-5 2xl:grid-cols-6">
@@ -66,13 +60,13 @@ import Workflow from '@/models/workflow';
 const dialog = useDialog();
 
 const sorts = [
-  { name: 'Name', id: 'name' },
-  { name: 'Created date', id: 'createdAt' },
+  { name: '名称', id: 'name' },
+  { name: '创建日期', id: 'createdAt' },
 ];
 const menu = [
-  { name: 'export', icon: 'riDownloadLine' },
-  { name: 'rename', icon: 'riPencilLine' },
-  { name: 'delete', icon: 'riDeleteBin7Line' },
+  { name: '导出', icon: 'riDownloadLine' },
+  { name: '重命名', icon: 'riPencilLine' },
+  { name: '删除', icon: 'riDeleteBin7Line' },
 ];
 
 const state = shallowReactive({
@@ -95,9 +89,9 @@ function executeWorkflow(workflow) {
 }
 function newWorkflow() {
   dialog.prompt({
-    title: 'New workflow',
-    placeholder: 'Workflow name',
-    okText: 'Add workflow',
+    title: '新建流程',
+    placeholder: '流程名称',
+    okText: '添加流程',
     onConfirm: (name) => {
       Workflow.insert({
         data: {
@@ -110,9 +104,9 @@ function newWorkflow() {
 }
 function deleteWorkflow({ name, id }) {
   dialog.confirm({
-    title: 'Delete workflow',
+    title: '删除流程',
     okVariant: 'danger',
-    body: `Are you sure you want to delete "${name}" workflow?`,
+    body: `确定要删除 "${name}" 流程？`,
     onConfirm: () => {
       Workflow.delete(id);
     },
@@ -120,9 +114,9 @@ function deleteWorkflow({ name, id }) {
 }
 function renameWorkflow({ id, name }) {
   dialog.prompt({
-    title: 'Rename workflow',
-    placeholder: 'Workflow name',
-    okText: 'Rename',
+    title: '重命名流程',
+    placeholder: '流程名称',
+    okText: '重命名',
     inputValue: name,
     onConfirm: (newName) => {
       Workflow.update({
@@ -136,9 +130,9 @@ function renameWorkflow({ id, name }) {
 }
 
 const menuHandlers = {
-  export: exportWorkflow,
-  rename: renameWorkflow,
-  delete: deleteWorkflow,
+  "导出": exportWorkflow,
+  "重命名": renameWorkflow,
+  "删除": deleteWorkflow,
 };
 </script>
 <style>

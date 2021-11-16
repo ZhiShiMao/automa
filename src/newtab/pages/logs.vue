@@ -1,6 +1,6 @@
 <template>
   <div class="container pt-8 pb-4 logs-list">
-    <h1 class="text-2xl font-semibold mb-6">Logs</h1>
+    <h1 class="text-2xl font-semibold mb-6">日志</h1>
     <logs-filters
       :sorts="sortsBuilder"
       :filters="filtersBuilder"

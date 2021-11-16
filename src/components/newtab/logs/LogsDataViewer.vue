@@ -5,7 +5,7 @@
     <ui-popover>
       <template #trigger>
         <ui-button variant="accent">
-          <span>Export data</span>
+          <span>导出数据</span>
           <v-remixicon name="riArrowDropDownLine" class="ml-2 -mr-1" />
         </ui-button>
       </template>

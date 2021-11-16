@@ -2,7 +2,7 @@
   <div>
     <ui-textarea
       :model-value="data.description"
-      placeholder="Description"
+      placeholder="描述"
       class="w-full"
       @change="updateData({ description: $event })"
     />

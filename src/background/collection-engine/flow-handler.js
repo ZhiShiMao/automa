@@ -46,6 +46,6 @@ export function exportResult() {
   return new Promise((resolve) => {
     dataExporter(this.data, { name: this.collection.name, type: 'json' }, true);
 
-    resolve({ name: 'Export result' });
+    resolve({ name: '导出结果' });
   });
 }

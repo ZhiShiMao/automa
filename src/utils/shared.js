@@ -2,7 +2,7 @@
 
 export const tasks = {
   trigger: {
-    name: 'Trigger',
+    name: '触发器',
     description: 'Block where workflow will start executing',
     icon: 'riFlashlightLine',
     component: 'BlockBasic',
@@ -26,7 +26,7 @@ export const tasks = {
     },
   },
   'active-tab': {
-    name: 'Active tab',
+    name: '激活标签',
     description: "Set current tab that you're in as a active tab",
     icon: 'riWindowLine',
     component: 'BlockBasic',
@@ -39,7 +39,7 @@ export const tasks = {
     data: {},
   },
   'new-tab': {
-    name: 'New tab',
+    name: '新建标签',
     description: 'Create a new tab',
     icon: 'riGlobalLine',
     component: 'BlockBasic',
@@ -58,7 +58,7 @@ export const tasks = {
     },
   },
   'new-window': {
-    name: 'New window',
+    name: '打开新的窗口',
     description: 'Create a new window',
     icon: 'riWindow2Line',
     component: 'BlockBasic',
@@ -75,7 +75,7 @@ export const tasks = {
     },
   },
   'go-back': {
-    name: 'Go back',
+    name: '后退',
     description: 'Go back to the previous page',
     icon: 'riArrowGoBackLine',
     component: 'BlockBasic',
@@ -88,7 +88,7 @@ export const tasks = {
     data: {},
   },
   'forward-page': {
-    name: 'Go forward',
+    name: '前进',
     description: 'Go forward to the next page',
     icon: 'riArrowGoForwardLine',
     component: 'BlockBasic',
@@ -101,7 +101,7 @@ export const tasks = {
     data: {},
   },
   'close-tab': {
-    name: 'Close tab',
+    name: '关闭标签',
     icon: 'riCloseCircleLine',
     component: 'BlockBasic',
     category: 'browser',
@@ -116,7 +116,7 @@ export const tasks = {
     },
   },
   'take-screenshot': {
-    name: 'Take screenshot',
+    name: '截图',
     description: 'Take a screenshot of current active tab',
     icon: 'riImageLine',
     component: 'BlockBasic',
@@ -134,7 +134,7 @@ export const tasks = {
     },
   },
   'event-click': {
-    name: 'Click element',
+    name: '点击元素',
     icon: 'riCursorLine',
     component: 'BlockBasic',
     editComponent: 'EditInteractionBase',
@@ -151,7 +151,7 @@ export const tasks = {
     },
   },
   delay: {
-    name: 'Delay',
+    name: '延时',
     description: 'Add delay before executing the next block',
     icon: 'riTimerLine',
     component: 'BlockDelay',
@@ -166,7 +166,7 @@ export const tasks = {
     },
   },
   'get-text': {
-    name: 'Get text',
+    name: '获取文本',
     description: 'Get text from an element',
     icon: 'riParagraph',
     component: 'BlockBasic',
@@ -188,7 +188,7 @@ export const tasks = {
     },
   },
   'export-data': {
-    name: 'Export data',
+    name: '导出数据',
     icon: 'riDownloadLine',
     component: 'BlockExportData',
     editComponent: 'EditTrigger',
@@ -203,7 +203,7 @@ export const tasks = {
     },
   },
   'element-scroll': {
-    name: 'Scroll element',
+    name: '滚动元素',
     icon: 'riMouseLine',
     component: 'BlockBasic',
     editComponent: 'EditScrollElement',
@@ -226,7 +226,7 @@ export const tasks = {
     },
   },
   link: {
-    name: 'Link',
+    name: '链接',
     description: 'Open link element',
     icon: 'riLink',
     component: 'BlockBasic',
@@ -244,7 +244,7 @@ export const tasks = {
     },
   },
   'attribute-value': {
-    name: 'Attribute value',
+    name: '属性值',
     description: 'Get attribute value of an element',
     icon: 'riBracketsLine',
     component: 'BlockBasic',
@@ -265,7 +265,7 @@ export const tasks = {
     },
   },
   forms: {
-    name: 'Forms',
+    name: '表单',
     icon: 'riInputCursorMove',
     description: 'Manipulate form(input, select, checkbox, and radio) element',
     component: 'BlockBasic',
@@ -289,7 +289,7 @@ export const tasks = {
     },
   },
   'repeat-task': {
-    name: 'Repeat task',
+    name: '重复任务',
     icon: 'riRepeat2Line',
     component: 'BlockRepeatTask',
     editComponent: 'EditTrigger',
@@ -315,7 +315,7 @@ export const tasks = {
   //   data: {},
   // },
   'javascript-code': {
-    name: 'JavaScript code',
+    name: 'JS代码',
     description: 'Execute your custom javascript code in a webpage',
     icon: 'riCodeSSlashLine',
     component: 'BlockBasic',
@@ -332,7 +332,7 @@ export const tasks = {
     },
   },
   'trigger-event': {
-    name: 'Trigger event',
+    name: '触发事件',
     description: 'Trigger event',
     icon: 'riLightbulbFlashLine',
     component: 'BlockBasic',
@@ -353,7 +353,7 @@ export const tasks = {
     },
   },
   conditions: {
-    name: 'Conditions',
+    name: '条件',
     description: 'Conditional block',
     icon: 'riAB',
     component: 'BlockConditions',
@@ -367,7 +367,7 @@ export const tasks = {
     },
   },
   'element-exists': {
-    name: 'Element exists',
+    name: '元素存在',
     description: 'Check if an element is exists',
     icon: 'riFocus3Line',
     component: 'BlockElementExists',
@@ -405,7 +405,7 @@ export const tasks = {
     },
   },
   'loop-data': {
-    name: 'Loop data',
+    name: '循环数据',
     icon: 'riRefreshLine',
     component: 'BlockBasic',
     editComponent: 'EditLoopData',
@@ -424,7 +424,7 @@ export const tasks = {
     },
   },
   'loop-breakpoint': {
-    name: 'Loop breakpoint',
+    name: '循环断点',
     description: 'To tell where loop data must stop',
     icon: 'riStopLine',
     component: 'BlockLoopBreakpoint',
@@ -440,7 +440,7 @@ export const tasks = {
     },
   },
   'switch-to': {
-    name: 'Switch frame',
+    name: '切换Frame',
     description: 'Switch between main window and iframe',
     icon: 'riArrowUpDownLine',
     component: 'BlockBasic',
@@ -459,19 +459,19 @@ export const tasks = {
 
 export const categories = {
   interaction: {
-    name: 'Web interaction',
+    name: '网页交互',
     color: 'bg-green-200',
   },
   browser: {
-    name: 'Browser',
+    name: '浏览器',
     color: 'bg-orange-200',
   },
   general: {
-    name: 'General',
+    name: '通用',
     color: 'bg-yellow-200',
   },
   conditions: {
-    name: 'Conditions',
+    name: '条件',
     color: 'bg-blue-200',
   },
 };

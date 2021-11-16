@@ -42,9 +42,9 @@ const defaultOptions = {
   title: '',
   placeholder: '',
   label: '',
-  okText: 'Confirm',
+  okText: '确定',
   okVariant: 'accent',
-  cancelText: 'Cancel',
+  cancelText: '取消',
   onConfirm: null,
   onCancel: null,
 };

@@ -26,10 +26,10 @@
     <div class="flex-1 relative overflow-auto">
       <div class="absolute px-3 rounded-lg bg-white z-10 left-0 m-4 top-0">
         <ui-tabs v-model="activeTab" class="border-none h-full space-x-1">
-          <ui-tab value="editor">Editor</ui-tab>
-          <ui-tab value="logs">Logs</ui-tab>
+          <ui-tab value="editor">编辑器</ui-tab>
+          <ui-tab value="logs">日志</ui-tab>
           <ui-tab value="running" class="flex items-center">
-            Running
+            流程执行
             <span
               v-if="workflowState.length > 0"
               class="
@@ -64,7 +64,7 @@
                 src="@/assets/svg/files-and-folder.svg"
                 class="mx-auto max-w-sm"
               />
-              <p class="text-xl font-semibold">No data to show</p>
+              <p class="text-xl font-semibold">暂无可显示数据</p>
             </div>
             <shared-logs-table :logs="logs" class="w-full">
               <template #item-append="{ log: itemLog }">
@@ -84,7 +84,7 @@
                 src="@/assets/svg/files-and-folder.svg"
                 class="mx-auto max-w-sm"
               />
-              <p class="text-xl font-semibold">No data to show</p>
+              <p class="text-xl font-semibold">暂无可显示数据</p>
             </div>
             <div class="grid grid-cols-2 gap-4">
               <shared-workflow-state
@@ -325,9 +325,9 @@ function deleteWorkflow() {
 }
 function renameWorkflow() {
   dialog.prompt({
-    title: 'Rename workflow',
-    placeholder: 'Workflow name',
-    okText: 'Rename',
+    title: '重命名流程',
+    placeholder: '流程名称',
+    okText: '重命名',
     inputValue: workflow.value.name,
     onConfirm: (newName) => {
       Workflow.update({

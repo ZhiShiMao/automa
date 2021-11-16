@@ -8,7 +8,7 @@
       autofocus
       prepend-icon="riSearch2Line"
       class="flex-1 search-input"
-      placeholder="Search..."
+      placeholder="搜索 ..."
     ></ui-input>
     <ui-button
       v-tooltip="
@@ -20,7 +20,7 @@
     >
       <v-remixicon name="riFocus3Line" />
     </ui-button>
-    <ui-button icon title="Dashboard" class="ml-3" @click="openDashboard">
+    <ui-button icon title="仪表盘" class="ml-3" @click="openDashboard">
       <v-remixicon name="riHome5Line" />
     </ui-button>
   </div>
@@ -33,7 +33,7 @@
         class="mt-6"
         @click="openDashboard('/workflows')"
       >
-        New workflow
+        新建流程
       </ui-button>
     </ui-card>
     <home-workflow-card
@@ -74,9 +74,9 @@ function executeWorkflow(workflow) {
 }
 function renameWorkflow({ id, name }) {
   dialog.prompt({
-    title: 'Rename workflow',
-    placeholder: 'Workflow name',
-    okText: 'Rename',
+    title: '重命名流程',
+    placeholder: '流程名称',
+    okText: '重命名',
     inputValue: name,
     onConfirm: (newName) => {
       Workflow.update({

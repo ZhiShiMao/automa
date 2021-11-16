@@ -3,7 +3,7 @@
     <ui-textarea
       :model-value="data.description"
       autoresize
-      placeholder="Description"
+      placeholder="描述"
       class="w-full"
       @change="updateData({ description: $event })"
     />

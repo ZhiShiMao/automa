@@ -10,7 +10,7 @@
           size="20"
           class="inline-block mr-1"
         />
-        <span>Export data</span>
+        <span>导出数据</span>
       </div>
       <div class="flex-grow"></div>
       <v-remixicon
@@ -24,7 +24,7 @@
       class="bg-input rounded-lg transition w-40 mb-2 py-2 px-4 block"
       placeholder="File name"
     />
-    <ui-select v-model="block.data.type" class="w-40" placeholder="Export as">
+    <ui-select v-model="block.data.type" class="w-40" placeholder="导出为">
       <option v-for="type in dataExportTypes" :key="type.id" :value="type.id">
         {{ type.name }}
       </option>

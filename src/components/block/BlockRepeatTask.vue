@@ -6,7 +6,7 @@
         class="inline-block text-sm mr-4 p-2 rounded-lg"
       >
         <v-remixicon name="riRepeat2Line" size="20" class="inline-block mr-1" />
-        <span>Repeat task</span>
+        <span>重复任务</span>
       </div>
       <div class="flex-grow"></div>
       <v-remixicon

@@ -1,11 +1,11 @@
 <template>
   <div class="container pt-8 pb-4">
-    <h1 class="text-2xl font-semibold mb-8">Dashboard</h1>
+    <h1 class="text-2xl font-semibold mb-8">仪表盘</h1>
     <div class="flex items-start">
       <div class="w-8/12 mr-8">
         <div class="grid gap-4 mb-8 2xl:grid-cols-4 grid-cols-3">
           <p v-if="workflows.length === 0" class="text-center text-gray-600">
-            No data
+            暂无数据
           </p>
           <shared-card
             v-for="workflow in workflows"
@@ -19,23 +19,23 @@
         </div>
         <div>
           <div class="mb-2 flex items-center justify-between">
-            <p class="font-semibold inline-block">Logs</p>
+            <p class="font-semibold inline-block">日志</p>
             <router-link
               to="/logs"
               class="text-gray-600 text-sm dark:text-gray-200"
             >
-              View all
+              查看全部
             </router-link>
           </div>
           <p v-if="logs.length === 0" class="text-center text-gray-600">
-            No data
+            暂无数据
           </p>
           <shared-logs-table :logs="logs" class="w-full" />
         </div>
       </div>
       <div class="w-4/12 space-y-4">
         <p v-if="workflowState.length === 0" class="text-center text-gray-600">
-          No data
+          暂无数据
         </p>
         <shared-workflow-state
           v-for="item in workflowState"

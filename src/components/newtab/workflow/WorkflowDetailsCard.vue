@@ -85,7 +85,7 @@
           @click="$emit('rename')"
         >
           <v-remixicon name="riPencilLine" class="mr-2 -ml-1" />
-          <span>Rename</span>
+          <span>重命名</span>
         </ui-list-item>
         <ui-list-item
           v-close-popover
@@ -93,7 +93,7 @@
           @click="$emit('export', workflow)"
         >
           <v-remixicon name="riDownloadLine" class="mr-2 -ml-1" />
-          <span>Export</span>
+          <span>导出</span>
         </ui-list-item>
         <ui-list-item
           v-close-popover
@@ -109,7 +109,7 @@
           @click="$emit('showSettings')"
         >
           <v-remixicon name="riSettings3Line" class="mr-2 -ml-1" />
-          <span>Settings</span>
+          <span>设置</span>
         </ui-list-item>
         <ui-list-item
           v-close-popover
@@ -117,7 +117,7 @@
           @click="$emit('delete')"
         >
           <v-remixicon name="riDeleteBin7Line" class="mr-2 -ml-1" />
-          <span>Delete</span>
+          <span>删除</span>
         </ui-list-item>
       </ui-list>
     </ui-popover>

@@ -64,7 +64,7 @@
       </router-link>
     </div>
     <div class="flex-grow"></div>
-    <a
+    <!--<a
       v-tooltip:right="'Documentation'"
       href="https://github.com/kholid060/automa/wiki"
       rel="noopener"
@@ -80,7 +80,7 @@
       target="_blank"
     >
       <v-remixicon name="riGithubFill" />
-    </a>
+    </a>-->
   </aside>
 </template>
 <script setup>
@@ -91,22 +91,22 @@ useGroupTooltip();
 
 const tabs = [
   {
-    name: 'Dashboard',
+    name: '仪表盘',
     icon: 'riHome5Line',
     path: '/',
   },
   {
-    name: 'Workflows',
+    name: '流程',
     icon: 'riFlowChart',
     path: '/workflows',
   },
   {
-    name: 'Collections',
+    name: '集合',
     icon: 'riFolderLine',
     path: '/collections',
   },
   {
-    name: 'Logs',
+    name: '日志',
     icon: 'riHistoryLine',
     path: '/logs',
   },

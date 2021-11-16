@@ -32,7 +32,7 @@
           prepend-icon="riSearch2Line"
         />
         <ui-tabs v-model="state.sidebarTab" fill class="w-full mb-4">
-          <ui-tab value="workflows">Workflows</ui-tab>
+          <ui-tab value="workflows">流程</ui-tab>
           <ui-tab value="blocks">Blocks</ui-tab>
         </ui-tabs>
         <draggable
@@ -61,9 +61,9 @@
             class="border-none h-full space-x-1"
           >
             <ui-tab value="flow">Flow</ui-tab>
-            <ui-tab value="logs">Logs</ui-tab>
+            <ui-tab value="logs">日志</ui-tab>
             <ui-tab value="running">
-              Running
+              流程执行
               <span
                 v-if="runningCollection.length > 0"
                 class="
@@ -156,7 +156,7 @@
                 src="@/assets/svg/files-and-folder.svg"
                 class="mx-auto max-w-sm"
               />
-              <p class="text-xl font-semibold">No data to show</p>
+              <p class="text-xl font-semibold">暂无可显示数据</p>
             </div>
             <shared-logs-table :logs="logs" class="w-full">
               <template #item-append="{ log }">
@@ -176,7 +176,7 @@
                 src="@/assets/svg/files-and-folder.svg"
                 class="mx-auto max-w-sm"
               />
-              <p class="text-xl font-semibold">No data to show</p>
+              <p class="text-xl font-semibold">暂无可显示数据</p>
             </div>
             <div class="grid grid-cols-2 gap-4">
               <shared-workflow-state
@@ -220,8 +220,8 @@ const blocks = {
     type: 'block',
     id: 'export-result',
     icon: 'riDownloadLine',
-    name: 'Export result',
-    description: 'Export the collection result as JSON',
+    name: '导出结果',
+    description: '将集合结果导出为JSON',
     data: {
       type: 'json',
     },
