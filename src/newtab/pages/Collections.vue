@@ -68,8 +68,8 @@ function executeCollection(collection) {
 function newCollection() {
   dialog.prompt({
     title: '创建集合',
-    placeholder: 'Collection name',
-    okText: 'Add collection',
+    placeholder: '集合名称',
+    okText: '添加集合',
     onConfirm: (name) => {
       Collection.insert({
         data: {
