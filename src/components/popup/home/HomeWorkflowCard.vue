@@ -26,7 +26,7 @@
           :key="item.name"
           v-close-popover
           class="capitalize cursor-pointer"
-          @click="$emit(item.name, workflow)"
+          @click="$emit(item.id, workflow)"
         >
           <v-remixicon :name="item.icon" class="mr-2 -ml-1" />
           <span>{{ item.name }}</span>
@@ -47,7 +47,7 @@ defineProps({
 defineEmits(['execute', 'rename', 'details', 'delete']);
 
 const menu = [
-  { name: 'rename', icon: 'riPencilLine' },
-  { name: 'delete', icon: 'riDeleteBin7Line' },
+  { id: 'rename', name: '重命名', icon: 'riPencilLine' },
+  { id: 'delete', name: '删除', icon: 'riDeleteBin7Line' },
 ];
 </script>

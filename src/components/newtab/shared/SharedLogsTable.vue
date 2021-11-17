@@ -21,7 +21,7 @@
             {{ formatDate(log.startedAt, 'relative') }}
           </span>
         </td>
-        <td class="log-time" title="Duration">
+        <td class="log-time" title="运行时长">
           <v-remixicon name="riTimerLine"></v-remixicon>
           <span>{{ countDuration(log.startedAt, log.endedAt) }}</span>
         </td>
@@ -31,7 +31,7 @@
             :title="log.status === 'error' ? getErrorMessage(log) : null"
             class="inline-block py-1 w-16 text-center text-sm rounded-lg"
           >
-            {{ log.status }}
+            {{ logStatus[log.status] }}
           </span>
         </td>
         <slot name="item-append" :log="log" />
@@ -54,6 +54,12 @@ const statusColors = {
   error: 'bg-red-200',
   success: 'bg-green-200',
   stopped: 'bg-yellow-200',
+};
+
+const logStatus = {
+  success: '成功',
+  stopped: '停止',
+  error: '错误',
 };
 
 function formatDate(date, format) {

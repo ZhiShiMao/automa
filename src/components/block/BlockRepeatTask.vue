@@ -34,9 +34,9 @@
         required
         @input="handleInput"
       />
-      <span class="text-gray-600">Times</span>
+      <span class="text-gray-600">次数</span>
     </label>
-    <p class="text-right text-gray-600">Repeat from</p>
+    <p class="text-right text-gray-600">重复开始的节点</p>
   </div>
 </template>
 <script setup>

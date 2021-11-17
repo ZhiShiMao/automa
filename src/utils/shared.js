@@ -3,7 +3,7 @@
 export const tasks = {
   trigger: {
     name: '触发器',
-    description: 'Block where workflow will start executing',
+    description: '工作流的触发方式',
     icon: 'riFlashlightLine',
     component: 'BlockBasic',
     editComponent: 'EditTrigger',
@@ -27,7 +27,7 @@ export const tasks = {
   },
   'active-tab': {
     name: '激活标签',
-    description: "Set current tab that you're in as a active tab",
+    description: "将当前标签设置为激活状态",
     icon: 'riWindowLine',
     component: 'BlockBasic',
     category: 'browser',
@@ -40,7 +40,7 @@ export const tasks = {
   },
   'new-tab': {
     name: '新建标签',
-    description: 'Create a new tab',
+    description: '创建新的标签',
     icon: 'riGlobalLine',
     component: 'BlockBasic',
     editComponent: 'EditNewTab',
@@ -59,7 +59,7 @@ export const tasks = {
   },
   'new-window': {
     name: '打开新的窗口',
-    description: 'Create a new window',
+    description: '打开新的窗口，访问页面',
     icon: 'riWindow2Line',
     component: 'BlockBasic',
     editComponent: 'EditNewWindow',
@@ -75,8 +75,8 @@ export const tasks = {
     },
   },
   'go-back': {
-    name: '后退',
-    description: 'Go back to the previous page',
+    name: '后退页面',
+    description: '根据当前标签的浏览历史，后退到上次访问的页面',
     icon: 'riArrowGoBackLine',
     component: 'BlockBasic',
     category: 'browser',
@@ -88,8 +88,8 @@ export const tasks = {
     data: {},
   },
   'forward-page': {
-    name: '前进',
-    description: 'Go forward to the next page',
+    name: '前进页面',
+    description: '根据当前标签的浏览历史，前进到之后访问的页面',
     icon: 'riArrowGoForwardLine',
     component: 'BlockBasic',
     category: 'browser',
@@ -117,7 +117,7 @@ export const tasks = {
   },
   'take-screenshot': {
     name: '截图',
-    description: 'Take a screenshot of current active tab',
+    description: '在当前激活的标签中，进行页面截图',
     icon: 'riImageLine',
     component: 'BlockBasic',
     category: 'browser',
@@ -152,7 +152,7 @@ export const tasks = {
   },
   delay: {
     name: '延时',
-    description: 'Add delay before executing the next block',
+    description: '等待一定事件后，执行下一个标签',
     icon: 'riTimerLine',
     component: 'BlockDelay',
     editComponent: 'EditTrigger',
@@ -167,7 +167,7 @@ export const tasks = {
   },
   'get-text': {
     name: '获取文本',
-    description: 'Get text from an element',
+    description: '从一个元素中获取文本',
     icon: 'riParagraph',
     component: 'BlockBasic',
     editComponent: 'EditGetText',
@@ -227,7 +227,7 @@ export const tasks = {
   },
   link: {
     name: '链接',
-    description: 'Open link element',
+    description: '根据链接访问新的页面',
     icon: 'riLink',
     component: 'BlockBasic',
     editComponent: 'EditInteractionBase',
@@ -245,7 +245,7 @@ export const tasks = {
   },
   'attribute-value': {
     name: '属性值',
-    description: 'Get attribute value of an element',
+    description: '从一个元素中获取属性值',
     icon: 'riBracketsLine',
     component: 'BlockBasic',
     editComponent: 'EditAttributeValue',
@@ -267,7 +267,7 @@ export const tasks = {
   forms: {
     name: '表单',
     icon: 'riInputCursorMove',
-    description: 'Manipulate form(input, select, checkbox, and radio) element',
+    description: '操作表单元素，支持输入框、单选、多选和复选框',
     component: 'BlockBasic',
     editComponent: 'EditForms',
     category: 'interaction',
@@ -316,7 +316,7 @@ export const tasks = {
   // },
   'javascript-code': {
     name: 'JS代码',
-    description: 'Execute your custom javascript code in a webpage',
+    description: '在网页中执行自定义 JavaScript 代码',
     icon: 'riCodeSSlashLine',
     component: 'BlockBasic',
     editComponent: 'EditJavascriptCode',
@@ -333,7 +333,7 @@ export const tasks = {
   },
   'trigger-event': {
     name: '触发事件',
-    description: 'Trigger event',
+    description: '触发事件',
     icon: 'riLightbulbFlashLine',
     component: 'BlockBasic',
     editComponent: 'EditTriggerEvent',
@@ -354,7 +354,7 @@ export const tasks = {
   },
   conditions: {
     name: '条件',
-    description: 'Conditional block',
+    description: '条件节点',
     icon: 'riAB',
     component: 'BlockConditions',
     category: 'conditions',
@@ -368,7 +368,7 @@ export const tasks = {
   },
   'element-exists': {
     name: '元素存在',
-    description: 'Check if an element is exists',
+    description: '根据元素是否存在执行下一步的流程',
     icon: 'riFocus3Line',
     component: 'BlockElementExists',
     editComponent: 'EditElementExists',
@@ -386,7 +386,7 @@ export const tasks = {
   },
   webhook: {
     name: 'Webhook',
-    description: 'Webhook allow external service to be notified',
+    description: '调用 Webhook 来通知外部服务',
     icon: 'webhookIcon',
     component: 'BlockBasic',
     editComponent: 'EditWebhook',
@@ -425,7 +425,7 @@ export const tasks = {
   },
   'loop-breakpoint': {
     name: '循环断点',
-    description: 'To tell where loop data must stop',
+    description: '在断点处，结束循环',
     icon: 'riStopLine',
     component: 'BlockLoopBreakpoint',
     category: 'general',
@@ -440,8 +440,8 @@ export const tasks = {
     },
   },
   'switch-to': {
-    name: '切换Frame',
-    description: 'Switch between main window and iframe',
+    name: '切换iFrame',
+    description: '在主窗口和iFrame之间切换',
     icon: 'riArrowUpDownLine',
     component: 'BlockBasic',
     editComponent: 'EditSwitchTo',
@@ -477,28 +477,28 @@ export const categories = {
 };
 
 export const eventList = [
-  { id: 'click', name: 'Click', type: 'mouse-event' },
-  { id: 'dblclick', name: 'Double Click', type: 'mouse-event' },
-  { id: 'mouseup', name: 'Mouseup', type: 'mouse-event' },
-  { id: 'mousedown', name: 'Mousedown', type: 'mouse-event' },
-  { id: 'focus', name: 'Focus', type: 'focus-event' },
-  { id: 'blur', name: 'Blur', type: 'focus-event' },
-  { id: 'input', name: 'Input', type: 'input-event' },
-  { id: 'change', name: 'Change', type: 'event' },
-  { id: 'touchstart', name: 'Touch start', type: 'touch-event' },
-  { id: 'touchend', name: 'Touch end', type: 'touch-event' },
-  { id: 'touchmove', name: 'Touch move', type: 'touch-event' },
-  { id: 'touchcancel', name: 'Touch cancel', type: 'touch-event' },
-  { id: 'keydown', name: 'Keydown', type: 'keyboard-event' },
-  { id: 'keyup', name: 'Keyup', type: 'keyboard-event' },
-  { id: 'submit', name: 'Submit', type: 'submit-event' },
-  { id: 'wheel', name: 'Wheel', type: 'wheel-event' },
+  { id: 'click', name: '点击', type: 'mouse-event' },
+  { id: 'dblclick', name: '双击', type: 'mouse-event' },
+  { id: 'mouseup', name: '松开鼠标按键', type: 'mouse-event' },
+  { id: 'mousedown', name: '按下鼠标按键', type: 'mouse-event' },
+  { id: 'focus', name: '获得焦点', type: 'focus-event' },
+  { id: 'blur', name: '失去焦点', type: 'focus-event' },
+  { id: 'input', name: '输入', type: 'input-event' },
+  { id: 'change', name: '改变', type: 'event' },
+  { id: 'touchstart', name: '开始触摸', type: 'touch-event' },
+  { id: 'touchend', name: '结束触摸', type: 'touch-event' },
+  { id: 'touchmove', name: '移动触摸手指', type: 'touch-event' },
+  { id: 'touchcancel', name: '取消触摸', type: 'touch-event' },
+  { id: 'keydown', name: '按键', type: 'keyboard-event' },
+  { id: 'keyup', name: '松开按键', type: 'keyboard-event' },
+  { id: 'submit', name: '提交', type: 'submit-event' },
+  { id: 'wheel', name: '鼠标滚轮', type: 'wheel-event' },
 ];
 
 export const dataExportTypes = [
   { name: 'JSON', id: 'json' },
   { name: 'CSV', id: 'csv' },
-  { name: 'Plain text', id: 'plain-text' },
+  { name: '纯文本', id: 'plain-text' },
 ];
 
 export const firstWorkflows = [

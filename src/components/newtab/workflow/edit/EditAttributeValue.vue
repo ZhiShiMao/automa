@@ -2,7 +2,7 @@
   <edit-interaction-base v-bind="{ data }" @change="updateData">
     <ui-input
       :model-value="data.attributeName"
-      placeholder="Attribute name"
+      placeholder="属性名"
       class="mt-3 w-full"
       @change="updateData({ attributeName: $event })"
     />
@@ -11,12 +11,12 @@
       class="mt-3"
       @change="updateData({ saveData: $event })"
     >
-      Save data
+      保存数据
     </ui-checkbox>
     <div v-if="data.saveData" class="flex items-center mt-1">
       <ui-select
         :model-value="data.dataColumn"
-        placeholder="Data column"
+        placeholder="数据列"
         class="mr-2 flex-1"
         @change="updateData({ dataColumn: $event })"
       >
@@ -30,7 +30,7 @@
       </ui-select>
       <ui-button
         icon
-        title="Data columns"
+        title="数据列"
         @click="workflow.showDataColumnsModal(true)"
       >
         <v-remixicon name="riKey2Line" />

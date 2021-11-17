@@ -20,7 +20,7 @@
         </p>
       </div>
       <div class="flex-grow"></div>
-      <ui-button class="text-red-500" @click="deleteLog"> Delete </ui-button>
+      <ui-button class="text-red-500" @click="deleteLog"> 删除 </ui-button>
     </div>
     <div class="flex items-start">
       <ui-list class="w-7/12 mr-6">

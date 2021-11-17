@@ -19,7 +19,7 @@
         class="mr-1 transition-transform -ml-1"
         :rotate="showOptions ? 270 : 180"
       />
-      <span class="flex-1">Options</span>
+      <span class="flex-1">选项</span>
       <a
         :href="getEventDetailsUrl()"
         rel="noopener"
@@ -90,7 +90,7 @@ const emit = defineEmits(['update:data']);
 const eventComponents = {
   'mouse-event': 'TriggerEventMouse',
   'focus-event': '',
-  'event': '',
+  event: '',
   'touch-event': 'TriggerEventTouch',
   'keyboard-event': 'TriggerEventKeyboard',
   'wheel-event': 'TriggerEventWheel',

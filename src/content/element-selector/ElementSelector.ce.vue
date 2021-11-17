@@ -21,11 +21,7 @@
     ></div>
   </template>
   <div class="card">
-    <button
-      title="Toggle hide"
-      class="mr-2"
-      @click="element.hide = !element.hide"
-    >
+    <button title="切换隐藏" class="mr-2" @click="element.hide = !element.hide">
       <v-remix-icon :path="element.hide ? riEyeLine : riEyeOffLine" />
     </button>
     <div class="selector">
@@ -37,29 +33,29 @@
       />
       <input
         type="text"
-        placeholder="Element selector"
-        title="Element selector"
+        placeholder="元素选择器"
+        title="元素选择器"
         readonly
         :value="element.selector"
       />
     </div>
     <template v-if="element.selector && !element.hide">
       <button
-        title="Select parent element (press P)"
+        title="选择父元素 (按 P)"
         class="ml-2"
         @click="selectParentElement"
       >
         <v-remix-icon :path="riArrowDownLine" rotate="180" />
       </button>
       <button
-        title="Select parent element (press C)"
+        title="选择子元素 (按 C)"
         class="ml-2"
         @click="selectChildElement"
       >
         <v-remix-icon :path="riArrowDownLine" />
       </button>
     </template>
-    <button class="primary ml-2" @click="destroy">Close</button>
+    <button class="primary ml-2" @click="destroy">关闭</button>
   </div>
 </template>
 <script setup>

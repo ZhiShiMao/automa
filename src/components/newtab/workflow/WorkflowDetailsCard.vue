@@ -67,7 +67,7 @@
         ></span>
       </span>
       <v-remixicon name="riSaveLine" class="mr-2 -ml-1" />
-      Save
+      保存
     </ui-button>
     <ui-button icon title="Execute" @click="$emit('execute')">
       <v-remixicon name="riPlayLine" />
@@ -101,7 +101,7 @@
           @click="$emit('showDataColumns')"
         >
           <v-remixicon name="riKey2Line" class="mr-2 -ml-1" />
-          <span>Data columns</span>
+          <span>数据列</span>
         </ui-list-item>
         <ui-list-item
           v-close-popover
@@ -126,7 +126,7 @@
     v-model="query"
     prepend-icon="riSearch2Line"
     class="px-4 mt-4 mb-2"
-    placeholder="Search blocks"
+    placeholder="搜索节点"
   />
   <div class="scroll bg-scroll overflow-auto px-4 flex-1 overflow-auto">
     <template v-for="(items, catId) in taskList" :key="catId">

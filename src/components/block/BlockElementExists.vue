@@ -10,10 +10,10 @@
       class="inline-block text-sm mb-2 p-2 rounded-lg"
     >
       <v-remixicon name="riFocus3Line" size="20" class="inline-block mr-1" />
-      <span>Element exists</span>
+      <span>元素存在</span>
     </div>
     <p
-      title="Element selector"
+      title="元素选择器"
       class="
         text-overflow
         p-2
@@ -26,11 +26,11 @@
       "
       style="max-width: 200px"
     >
-      {{ block.data.selector || 'Element selector' }}
+      {{ block.data.selector || '元素选择器' }}
     </p>
     <p class="text-right text-gray-600">
-      <span title="Execute when element doesn't exists"> &#9432; </span>
-      Fallback
+      <span title="当元素不存在时执行"> &#9432; </span>
+      不存在
     </p>
     <input
       type="text"

@@ -18,9 +18,9 @@
     <input
       :value="block.data.time"
       min="0"
-      title="Delay in millisecond"
+      title="多少毫秒后执行"
       class="px-4 py-2 rounded-lg w-36 bg-input"
-      placeholder="(millisecond)"
+      placeholder="毫秒"
       type="number"
       required
       @input="handleInput"

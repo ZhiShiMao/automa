@@ -6,7 +6,7 @@
         class="inline-block text-sm mr-4 p-2 rounded-lg"
       >
         <v-remixicon name="riAB" size="20" class="inline-block mr-1" />
-        <span>conditions</span>
+        <span>条件</span>
       </div>
       <div class="flex-grow"></div>
       <v-remixicon
@@ -65,7 +65,7 @@
           <input
             v-model="block.data.conditions[index].value"
             type="text"
-            placeholder="value"
+            placeholder="值"
             class="p-2 flex-1 transition rounded-r-lg bg-transparent w-36"
           />
         </div>
@@ -74,10 +74,8 @@
         v-if="block.data.conditions && block.data.conditions.length !== 0"
         class="text-right text-gray-600"
       >
-        <span title="Execute when all comparisons don't meet the requirement">
-          &#9432;
-        </span>
-        Fallback
+        <span title="当所有条件不符合要求时执行"> &#9432; </span>
+        不满足
       </p>
     </div>
   </div>
@@ -100,12 +98,12 @@ const componentId = useComponentId('block-conditions');
 const block = useEditorBlock(`#${componentId}`, props.editor);
 
 const conditions = {
-  '==': 'Equals',
-  '>': 'Greater than',
-  '>=': 'Greater than or equal',
-  '<': 'Less than',
-  '<=': 'Less than or equal',
-  '()': 'Contains',
+  '==': '等于',
+  '>': '大于',
+  '>=': '大于等于',
+  '<': '小于',
+  '<=': '小于等于',
+  '()': '包含',
 };
 
 function addComparison() {

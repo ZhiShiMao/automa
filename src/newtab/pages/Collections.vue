@@ -47,8 +47,8 @@ import SharedCard from '@/components/newtab/shared/SharedCard.vue';
 const dialog = useDialog();
 
 const collectionCardMenu = [
-  { name: 'rename', icon: 'riPencilLine' },
-  { name: 'delete', icon: 'riDeleteBin7Line' },
+  { name: '重命名', icon: 'riPencilLine' },
+  { name: '删除', icon: 'riDeleteBin7Line' },
 ];
 
 const query = ref('');
@@ -98,14 +98,14 @@ function renameCollection({ id, name }) {
 }
 function deleteCollection({ name, id }) {
   dialog.confirm({
-    title: 'Delete collection',
+    title: '删除集合',
     okVariant: 'danger',
-    body: `Are you sure you want to delete "${name}" collection?`,
+    body: `确实要上删除 "${name}" 结合吗？`,
     onConfirm: () => {
       Collection.delete(id);
     },
   });
 }
 
-const menuHandlers = { rename: renameCollection, delete: deleteCollection };
+const menuHandlers = { 重命名: renameCollection, 删除: deleteCollection };
 </script>

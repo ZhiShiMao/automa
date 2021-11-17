@@ -11,7 +11,7 @@
       type="number"
       :model-value="data.timeout"
       class="mb-2 w-full"
-      placeholder="Timeout"
+      placeholder="超时时长"
       title="Javascript code execution timeout"
       @change="updateData({ timeout: +$event })"
     />

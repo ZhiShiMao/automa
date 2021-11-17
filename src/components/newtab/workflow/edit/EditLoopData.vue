@@ -55,7 +55,7 @@
           Import file
         </ui-button>
         <ui-button
-          v-tooltip="'Options'"
+          v-tooltip="'选项'"
           :class="{ 'text-primary': state.showOptions }"
           icon
           class="ml-2"
@@ -114,8 +114,8 @@ const emit = defineEmits(['update:data']);
 const maxStrLength = 5e4;
 const maxFileSize = 1024 * 1024;
 const loopTypes = [
-  { id: 'data-columns', name: 'Data columns' },
-  { id: 'custom-data', name: 'Custom data' },
+  { id: 'data-columns', name: '数据列' },
+  { id: 'custom-data', name: '自定义数据' },
 ];
 const tempLoopData =
   props.data.loopData.length > maxStrLength

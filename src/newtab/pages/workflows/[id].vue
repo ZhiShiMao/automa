@@ -99,7 +99,7 @@
     </div>
   </div>
   <ui-modal v-model="state.showDataColumnsModal" content-class="max-w-xl">
-    <template #header>Data columns</template>
+    <template #header>数据列</template>
     <workflow-data-columns
       v-bind="{ workflow }"
       @update="updateWorkflow"
@@ -313,9 +313,9 @@ function handleEditorDataChanged() {
 }
 function deleteWorkflow() {
   dialog.confirm({
-    title: 'Delete workflow',
+    title: '删除流程',
     okVariant: 'danger',
-    body: `Are you sure you want to delete "${workflow.value.name}" workflow?`,
+    body: `确定要删除 "${workflow.value.name}" 流程吗？`,
     onConfirm: () => {
       Workflow.delete(route.params.id).then(() => {
         router.replace('/workflows');

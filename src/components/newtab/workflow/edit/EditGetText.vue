@@ -30,7 +30,7 @@
       class="mt-3"
       @change="updateData({ saveData: $event })"
     >
-      Save data
+      保存数据
     </ui-checkbox>
     <div v-if="data.saveData" class="flex items-center mt-1">
       <ui-select
@@ -49,7 +49,7 @@
       </ui-select>
       <ui-button
         icon
-        title="Data columns"
+        title="数据列"
         @click="workflow.showDataColumnsModal(true)"
       >
         <v-remixicon name="riKey2Line" />

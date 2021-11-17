@@ -3,12 +3,12 @@
     <ui-input
       v-model.lowercase="state.query"
       autofocus
-      placeholder="Search or add column"
+      placeholder="搜索或添加列"
       class="mr-2 flex-1"
       @keyup.enter="addColumn"
       @keyup.esc="$emit('close')"
     />
-    <ui-button variant="accent" @click="addColumn">Add</ui-button>
+    <ui-button variant="accent" @click="addColumn">添加</ui-button>
   </div>
   <ul
     class="space-y-2 overflow-y-auto scroll py-1"

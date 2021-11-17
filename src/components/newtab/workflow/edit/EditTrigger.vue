@@ -8,7 +8,7 @@
   />
   <ui-select
     :model-value="data.type || 'manual'"
-    placeholder="Trigger workflow"
+    placeholder="流程触发方式"
     class="w-full"
     @change="handleSelectChange"
   >
@@ -115,11 +115,11 @@ const props = defineProps({
 const emit = defineEmits(['update:data']);
 
 const triggers = [
-  { id: 'manual', name: 'Manually' },
-  { id: 'interval', name: 'Interval' },
-  { id: 'date', name: 'On specific date' },
-  { id: 'visit-web', name: 'When visit a website' },
-  { id: 'keyboard-shortcut', name: 'Keyboard shortcut' },
+  { id: 'manual', name: '手动执行' },
+  { id: 'interval', name: '定时间隔' },
+  { id: 'date', name: '指定日期' },
+  { id: 'visit-web', name: '当访问网站时' },
+  { id: 'keyboard-shortcut', name: '快捷键' },
 ];
 const maxDate = dayjs().add(30, 'day').format('YYYY-MM-DD');
 const minDate = dayjs().format('YYYY-MM-DD');

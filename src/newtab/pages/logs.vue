@@ -32,7 +32,7 @@
             <v-remixicon
               name="riDeleteBin7Line"
               class="text-red-500 cursor-pointer"
-              title="Delete log"
+              title="删除记录"
               @click="deleteLog(log.id)"
             />
           </div>
@@ -41,13 +41,13 @@
     </shared-logs-table>
     <div class="flex items-center justify-between mt-4">
       <div>
-        Showing
+        每页显示
         <select v-model="pagination.perPage" class="p-1 rounded-md bg-input">
           <option v-for="num in [10, 15, 25, 50, 100]" :key="num" :value="num">
             {{ num }}
           </option>
         </select>
-        items out of {{ filteredLogs.length }}
+        条，总共 {{ filteredLogs.length }} 条
       </div>
       <ui-pagination
         v-model="pagination.currentPage"
@@ -154,9 +154,9 @@ function toggleSelectedLog(selected, logId) {
 }
 function deleteSelectedLogs() {
   dialog.confirm({
-    title: 'Delete logs',
+    title: '删除记录',
     okVariant: 'danger',
-    body: `Are you sure want to delete all the selected logs?`,
+    body: `确定要删除所有选择的记录吗？`,
     onConfirm: () => {
       const promises = selectedLogs.value.map((logId) => Log.delete(logId));
 

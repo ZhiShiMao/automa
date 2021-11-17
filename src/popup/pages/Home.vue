@@ -11,9 +11,7 @@
       placeholder="搜索 ..."
     ></ui-input>
     <ui-button
-      v-tooltip="
-        haveAccess ? 'Element selector' : 'Don\'t have access to this site'
-      "
+      v-tooltip="haveAccess ? '元素选择器' : '无法在当前网站使用元素选择器'"
       icon
       class="ml-3"
       @click="selectElement"
@@ -90,9 +88,9 @@ function renameWorkflow({ id, name }) {
 }
 function deleteWorkflow({ id, name }) {
   dialog.confirm({
-    title: 'Delete workflow',
+    title: '删除流程',
     okVariant: 'danger',
-    body: `Are you sure you want to delete "${name}" workflow?`,
+    body: `确实要删除 "${name}" 流程吗？`,
     onConfirm: () => {
       Workflow.delete(id);
     },

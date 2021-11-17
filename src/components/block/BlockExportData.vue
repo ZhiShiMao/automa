@@ -22,7 +22,7 @@
     <input
       v-model="block.data.name"
       class="bg-input rounded-lg transition w-40 mb-2 py-2 px-4 block"
-      placeholder="File name"
+      placeholder="文件名"
     />
     <ui-select v-model="block.data.type" class="w-40" placeholder="导出为">
       <option v-for="type in dataExportTypes" :key="type.id" :value="type.id">

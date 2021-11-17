@@ -57,7 +57,7 @@
           <ui-button icon class="mr-2">
             <v-remixicon name="riFocus3Line" />
           </ui-button>
-          <ui-input placeholder="Element selector" class="mr-4 flex-1" />
+          <ui-input placeholder="元素选择器" class="mr-4 flex-1" />
           <ui-checkbox>Multiple</ui-checkbox>
         </div>
       </div>

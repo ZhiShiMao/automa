@@ -14,10 +14,10 @@
       />
       <div class="flex-grow"></div>
       <ui-button variant="accent" class="mr-4" @click="executeCollection">
-        Execute
+        执行
       </ui-button>
       <ui-button class="text-red-500" @click="deleteCollection">
-        Delete
+        删除
       </ui-button>
     </div>
     <div class="flex items-start">
@@ -27,13 +27,13 @@
       >
         <ui-input
           v-model="state.query"
-          placeholder="Search workflows"
+          placeholder="搜索流程"
           class="w-full space-x-1 mb-3"
           prepend-icon="riSearch2Line"
         />
         <ui-tabs v-model="state.sidebarTab" fill class="w-full mb-4">
           <ui-tab value="workflows">流程</ui-tab>
-          <ui-tab value="blocks">Blocks</ui-tab>
+          <ui-tab value="blocks">节点</ui-tab>
         </ui-tabs>
         <draggable
           :list="state.sidebarTab === 'workflows' ? workflows : blocksArr"
@@ -60,7 +60,7 @@
             v-model="state.activeTab"
             class="border-none h-full space-x-1"
           >
-            <ui-tab value="flow">Flow</ui-tab>
+            <ui-tab value="flow">流程</ui-tab>
             <ui-tab value="logs">记录</ui-tab>
             <ui-tab value="running">
               流程执行
@@ -81,7 +81,7 @@
                 {{ runningCollection.length }}
               </span>
             </ui-tab>
-            <ui-tab value="options">Options</ui-tab>
+            <ui-tab value="options">选项</ui-tab>
           </ui-tabs>
         </div>
         <ui-tab-panels v-model="state.activeTab">
@@ -102,7 +102,7 @@
                 p-4
               "
             >
-              Drop a workflow or block in here
+              将流程或节点拖拽到这里
             </div>
             <draggable
               :model-value="collectionFlow"
@@ -188,11 +188,9 @@
           </ui-tab-panel>
           <ui-tab-panel value="options">
             <ui-checkbox v-model="collectionOptions.atOnce">
-              <p class="leading-tight">
-                Execute all workflows in the collection at once
-              </p>
+              <p class="leading-tight">一次执行集合中的所有工作流</p>
               <p class="text-sm text-gray-600 leading-tight">
-                Block not gonna executed when using this option
+                使用此选项时不会执行节点
               </p>
             </ui-checkbox>
           </ui-tab-panel>
@@ -314,9 +312,9 @@ function deleteCollectionFlow(index) {
 }
 function deleteCollection() {
   dialog.confirm({
-    title: 'Delete collection',
+    title: '删除集合',
     okVariant: 'danger',
-    body: 'Are you sure you want to delete this collection?',
+    body: '确定要删除当前集合吗？',
     onConfirm: () => {
       Collection.delete(route.params.id).then(() => {
         router.replace('/collections');

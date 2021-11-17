@@ -1,7 +1,7 @@
 <template>
   <ui-input
     :model-value="data.selector"
-    label="Element selector"
+    label="元素选择器"
     class="mb-1 w-full"
     @change="updateData({ selector: $event })"
   />
@@ -10,15 +10,15 @@
       :model-value="data.tryCount"
       class="flex-1"
       type="number"
-      title="Try check element exists"
-      label="Try for"
+      title="尝试检查元素的存在"
+      label="重试次数"
       min="1"
       @change="updateData({ tryCount: +$event })"
     />
     <ui-input
       :model-value="data.timeout"
-      label="Timeout(ms)"
-      title="Timeout for each try"
+      label="超时时长(ms)"
+      title="每一次重试时长"
       class="flex-1"
       type="number"
       min="200"

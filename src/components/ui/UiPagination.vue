@@ -9,6 +9,7 @@
       <v-remixicon name="riArrowLeftSLine" />
     </ui-button>
     <div class="mx-4">
+      第
       <input
         ref="inputEl"
         v-tooltip="'Current page'"
@@ -28,8 +29,7 @@
         @click="$event.target.select()"
         @input="updatePage(+$event.target.value, $event.target)"
       />
-      of
-      {{ maxPage }}
+      页 / 共 {{ maxPage }} 页
     </div>
     <ui-button
       v-tooltip="'Next page'"

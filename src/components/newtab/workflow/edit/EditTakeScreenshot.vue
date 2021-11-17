@@ -2,25 +2,25 @@
   <div class="flex items-center mb-2 mt-8">
     <ui-input
       :model-value="data.fileName"
-      placeholder="File name"
+      placeholder="文件名"
       class="flex-1 mr-2"
-      title="File name"
+      title="文件名"
       @change="updateData({ fileName: $event })"
     />
     <ui-select
       :model-value="data.ext || 'png'"
-      placeholder="Type"
+      placeholder="类型"
       @change="updateData({ ext: $event })"
     >
       <option value="png">PNG</option>
       <option value="jpeg">JPEG</option>
     </ui-select>
   </div>
-  <p class="text-sm text-gray-600 ml-2">Image quality:</p>
+  <p class="text-sm text-gray-600 ml-2">图片质量：</p>
   <div class="bg-box-transparent px-4 mb-4 py-2 rounded-lg flex items-center">
     <input
       :value="data.quality"
-      title="Image quality"
+      title="图片质量"
       class="focus:outline-none flex-1"
       type="range"
       min="0"
@@ -34,7 +34,7 @@
     :model-value="data.captureActiveTab"
     @change="updateData({ captureActiveTab: $event })"
   >
-    Take screenshoot of active tab
+    在当前激活的标签中，进行页面截图
   </ui-checkbox>
 </template>
 <script setup>

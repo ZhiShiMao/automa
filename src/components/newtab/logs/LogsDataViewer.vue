@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center">
-    <ui-input v-model="fileName" placeholder="File name" title="File name" />
+    <ui-input v-model="fileName" placeholder="文件名" title="文件名" />
     <div class="flex-grow"></div>
     <ui-popover>
       <template #trigger>

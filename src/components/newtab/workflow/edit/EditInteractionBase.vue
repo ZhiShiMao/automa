@@ -11,7 +11,7 @@
     <ui-input
       v-if="!hideSelector"
       :model-value="data.selector"
-      placeholder="Element selector"
+      placeholder="元素选择器"
       class="mb-1 w-full"
       @change="updateData({ selector: $event })"
     />
@@ -19,18 +19,18 @@
       <ui-checkbox
         v-if="!data.disableMultiple && !hideMultiple"
         class="mr-6"
-        title="Select multiple elements"
+        title="选择多个元素"
         :model-value="data.multiple"
         @change="updateData({ multiple: $event })"
       >
-        Multiple
+        多个元素
       </ui-checkbox>
       <ui-checkbox
         :model-value="data.markEl"
-        title="An element will not be selected if have been selected before"
+        title="如果之前已经有元素选中，则不会被选择"
         @change="updateData({ markEl: $event })"
       >
-        Mark element
+        标记元素
       </ui-checkbox>
     </template>
     <slot></slot>
