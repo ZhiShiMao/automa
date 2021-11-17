@@ -21,27 +21,27 @@
       target="_blank"
       style="margin-top: 0"
     >
-      Learn how to add dynamic data
+      了解如何添加动态数据
     </a>
     <ui-checkbox
       :model-value="data.updatePrevTab"
       class="leading-tight"
-      title="Use the previously opened new tab instead of creating a new one"
+      title="使用以前打开的标签，而不是创建新的标签"
       @change="updateData({ updatePrevTab: $event })"
     >
-      Update previously opened tab
+      更新之前打开的标签
     </ui-checkbox>
     <ui-checkbox
       :model-value="data.active"
       @change="updateData({ active: $event })"
     >
-      Set as active tab
+      将标签设置为激活状态
     </ui-checkbox>
     <ui-checkbox
       :model-value="data.inGroup"
       @change="updateData({ inGroup: $event })"
     >
-      Add tab to group
+      添加到标签组
     </ui-checkbox>
   </div>
 </template>

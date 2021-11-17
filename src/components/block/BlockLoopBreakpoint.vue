@@ -6,7 +6,7 @@
         class="inline-block text-sm mr-4 p-2 rounded-lg"
       >
         <v-remixicon name="riStopLine" size="20" class="inline-block mr-1" />
-        <span>Loop breakpoint</span>
+        <span>循环断点</span>
       </div>
       <div class="flex-grow"></div>
       <v-remixicon
@@ -18,7 +18,7 @@
     <input
       :value="block.data.loopId"
       class="px-4 py-2 rounded-lg w-48 bg-input"
-      placeholder="Loop ID"
+      placeholder="循环ID"
       type="text"
       required
       @input="handleInput"

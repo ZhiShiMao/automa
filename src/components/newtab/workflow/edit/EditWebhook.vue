@@ -38,8 +38,8 @@
       @change="updateData({ timeout: +$event })"
     />
     <ui-tabs v-model="activeTab" fill class="mb-4">
-      <ui-tab value="headers">Headers</ui-tab>
-      <ui-tab value="body">Content body</ui-tab>
+      <ui-tab value="headers">请求头</ui-tab>
+      <ui-tab value="body">请求体</ui-tab>
     </ui-tabs>
     <ui-tab-panels :model-value="activeTab">
       <ui-tab-panel
@@ -68,7 +68,7 @@
           variant="accent"
           @click="addHeader"
         >
-          <span> Add Header </span>
+          <span> 添加请求头参数 </span>
         </ui-button>
       </ui-tab-panel>
       <ui-tab-panel value="body">
@@ -101,7 +101,7 @@
           class="border-b text-primary"
           target="_blank"
         >
-          Click here to learn how to add dynamic data
+          点击了解如何添加动态数据
         </a>
       </div>
     </ui-modal>

@@ -9,13 +9,13 @@
     <ui-input
       :model-value="data.loopId"
       class="w-full mb-3"
-      label="Loop ID"
-      placeholder="Loop ID"
+      label="循环ID"
+      placeholder="循环ID"
       @change="updateLoopID"
     />
     <ui-select
       :model-value="data.loopThrough"
-      placeholder="Loop through"
+      placeholder="基于以下数据类型循环"
       class="w-full mb-2"
       @change="
         updateData({
@@ -33,7 +33,7 @@
       class="w-full mb-4"
       min="0"
       type="number"
-      label="Max data to loop (0 to disable)"
+      label="循环的最大数据量（0表示禁用）"
       title="Max numbers of data to loop"
       @change="updateData({ maxLoop: +$event || 0 })"
     />
@@ -43,7 +43,7 @@
       variant="accent"
       @click="state.showDataModal = true"
     >
-      Insert data
+      插入数据
     </ui-button>
     <ui-modal
       v-model="state.showDataModal"

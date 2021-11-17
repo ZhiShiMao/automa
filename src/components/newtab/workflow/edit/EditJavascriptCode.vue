@@ -12,7 +12,7 @@
       :model-value="data.timeout"
       class="mb-2 w-full"
       placeholder="超时时长"
-      title="Javascript code execution timeout"
+      title="Javascript代码执行的超时市场"
       @change="updateData({ timeout: +$event })"
     />
     <prism-editor
@@ -25,7 +25,7 @@
     />
     <ui-modal
       v-model="showCodeModal"
-      title="Javascript code"
+      title="Javascript 代码"
       content-class="max-w-3xl"
     >
       <prism-editor
@@ -36,7 +36,7 @@
         style="height: calc(100vh - 18rem)"
       />
       <div>
-        Note:
+        提示：
         <ul class="list-disc pl-5">
           <li>
             To execute the next block, you can call the
