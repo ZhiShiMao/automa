@@ -1,13 +1,15 @@
 /* eslint-disable no-underscore-dangle */
-import browser from 'webextension-polyfill';
-import { nanoid } from 'nanoid';
-import { toCamelCase } from '@/utils/helper';
-import { tasks } from '@/utils/shared';
-import errorMessage from './error-message';
-import referenceData from '@/utils/reference-data';
-import workflowState from '../workflow-state';
+
 import * as blocksHandler from './blocks-handler';
+
+import browser from 'webextension-polyfill';
+import errorMessage from './error-message';
 import executeContentScript from '@/utils/execute-content-script';
+import { nanoid } from 'nanoid';
+import referenceData from '@/utils/reference-data';
+import { tasks } from '@/utils/shared';
+import { toCamelCase } from '@/utils/helper';
+import workflowState from '../workflow-state';
 
 let reloadTimeout;
 
@@ -150,7 +152,7 @@ class WorkflowEngine {
     this.logs.push({
       message,
       type: 'stop',
-      name: 'Workflow is stopped',
+      name: '点击停止',
     });
     this.destroy('stopped');
   }
@@ -282,8 +284,8 @@ class WorkflowEngine {
           } else {
             this.logs.push({
               type: 'finish',
-              message: 'Workflow finished running',
-              name: 'Finish',
+              message: '流程执行完成',
+              name: '完成',
             });
             this.dispatchEvent('finish');
             this.destroy('success');

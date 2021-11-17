@@ -17,7 +17,7 @@
           class="cursor-pointer"
           @click="exportData(type.id)"
         >
-          as {{ type.name }}
+          {{ type.name }}
         </ui-list-item>
       </ui-list>
     </ui-popover>

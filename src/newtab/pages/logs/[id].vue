@@ -7,16 +7,14 @@
         </h1>
         <p class="text-gray-600">
           <span class="capitalize">
-            {{
-              activeLog.status === 'success' ? 'succeeded' : activeLog.status
-            }}
+            {{ activeLog.status === 'success' ? '成功' : activeLog.status }} /
           </span>
           <span
             :title="dayjs(activeLog.startedAt).format('DD MMM YYYY, hh:mm A')"
           >
-            on {{ dayjs(activeLog.startedAt).format('DD MMM') }}
+            运行时间：{{ dayjs(activeLog.startedAt).format('MM-DD') }} /
           </span>
-          in {{ countDuration(activeLog.startedAt, activeLog.endedAt) }}
+          运行时长：{{ countDuration(activeLog.startedAt, activeLog.endedAt) }}
         </p>
       </div>
       <div class="flex-grow"></div>
