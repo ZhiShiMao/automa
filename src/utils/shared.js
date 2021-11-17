@@ -27,7 +27,7 @@ export const tasks = {
   },
   'active-tab': {
     name: '激活标签',
-    description: "将当前标签设置为激活状态",
+    description: '将当前标签设置为激活状态',
     icon: 'riWindowLine',
     component: 'BlockBasic',
     category: 'browser',
