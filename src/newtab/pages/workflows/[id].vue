@@ -296,7 +296,7 @@ function editBlock(data) {
 function executeWorkflow() {
   if (editor.value.getNodesFromName('trigger').length === 0) {
     /* eslint-disable-next-line */
-    alert("Can't find a trigger block");
+    alert('请添加一个触发器');
     return;
   }
 
@@ -350,9 +350,7 @@ provide('workflow', {
 onBeforeRouteLeave(() => {
   if (!state.isDataChanged) return;
 
-  const answer = window.confirm(
-    'Do you really want to leave? you have unsaved changes!'
-  );
+  const answer = window.confirm('当前页面尚未保存，确定要离开当前页面吗？');
 
   if (!answer) return false;
 });

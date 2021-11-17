@@ -22,7 +22,7 @@
         :model-value="data.interval"
         type="number"
         class="w-full mr-2"
-        label="Interval (minutes)"
+        label="时间间隔 (分钟)"
         placeholder="1-120"
         min="1"
         max="120"
@@ -34,7 +34,7 @@
         :model-value="data.delay"
         type="number"
         class="w-full"
-        label="Delay (minutes)"
+        label="延时时长 (分钟)"
         min="0"
         max="20"
         placeholder="0-20"
@@ -62,7 +62,7 @@
     <div v-else-if="data.type === 'visit-web'" class="mt-2">
       <ui-input
         :model-value="data.url"
-        placeholder="URL or Regex"
+        placeholder="URL或正则表达式"
         class="w-full"
         @change="updateData({ url: $event })"
       />
@@ -71,7 +71,7 @@
         class="mt-1"
         @change="updateData({ isUrlRegex: $event })"
       >
-        Use regex
+        使用正则表达式
       </ui-checkbox>
     </div>
     <div v-else-if="data.type === 'keyboard-shortcut'" class="mt-2">
