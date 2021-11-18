@@ -31,7 +31,7 @@
         class="mt-6"
         @click="openDashboard('/workflows')"
       >
-        新建流程
+        新建工作流
       </ui-button>
     </ui-card>
     <home-workflow-card
@@ -72,8 +72,8 @@ function executeWorkflow(workflow) {
 }
 function renameWorkflow({ id, name }) {
   dialog.prompt({
-    title: '重命名流程',
-    placeholder: '流程名称',
+    title: '重命名工作流',
+    placeholder: '工作流名称',
     okText: '重命名',
     inputValue: name,
     onConfirm: (newName) => {
@@ -88,9 +88,9 @@ function renameWorkflow({ id, name }) {
 }
 function deleteWorkflow({ id, name }) {
   dialog.confirm({
-    title: '删除流程',
+    title: '删除工作流',
     okVariant: 'danger',
-    body: `确实要删除 "${name}" 流程吗？`,
+    body: `确实要删除 "${name}" 工作流吗？`,
     onConfirm: () => {
       Workflow.delete(id);
     },

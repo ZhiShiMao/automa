@@ -8,7 +8,7 @@
   />
   <ui-select
     :model-value="data.type || 'manual'"
-    placeholder="流程触发方式"
+    placeholder="工作流触发方式"
     class="w-full"
     @change="handleSelectChange"
   >

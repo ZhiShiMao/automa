@@ -1,6 +1,6 @@
 <template>
   <div class="container pt-8 pb-4 logs-list">
-    <h1 class="text-2xl font-semibold mb-6">记录</h1>
+    <h1 class="text-2xl font-semibold mb-6">执行记录</h1>
     <logs-filters
       :sorts="sortsBuilder"
       :filters="filtersBuilder"
@@ -32,7 +32,7 @@
             <v-remixicon
               name="riDeleteBin7Line"
               class="text-red-500 cursor-pointer"
-              title="删除记录"
+              title="删除执行记录"
               @click="deleteLog(log.id)"
             />
           </div>
@@ -63,7 +63,7 @@
         {{ selectedLogs.length >= logs.length ? '取消全选' : '全选' }}
       </ui-button>
       <ui-button variant="danger" @click="deleteSelectedLogs">
-        删除选中记录 ({{ selectedLogs.length }})
+        删除选中执行记录 ({{ selectedLogs.length }})
       </ui-button>
     </ui-card>
     <ui-modal v-model="exportDataModal.show">
@@ -154,9 +154,9 @@ function toggleSelectedLog(selected, logId) {
 }
 function deleteSelectedLogs() {
   dialog.confirm({
-    title: '删除记录',
+    title: '删除执行记录',
     okVariant: 'danger',
-    body: `确定要删除所有选择的记录吗？`,
+    body: `确定要删除所有选择的执行记录吗？`,
     onConfirm: () => {
       const promises = selectedLogs.value.map((logId) => Log.delete(logId));
 

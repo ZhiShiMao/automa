@@ -96,7 +96,7 @@ const tabs = [
     path: '/',
   },
   {
-    name: '流程',
+    name: '工作流',
     icon: 'riFlowChart',
     path: '/workflows',
   },
@@ -106,7 +106,7 @@ const tabs = [
     path: '/collections',
   },
   {
-    name: '记录',
+    name: '执行记录',
     icon: 'riHistoryLine',
     path: '/logs',
   },

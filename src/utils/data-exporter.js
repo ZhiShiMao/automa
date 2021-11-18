@@ -53,5 +53,5 @@ export default function (data, { name, type }, converted) {
     type: mime,
   });
 
-  fileSaver(`${name || '未命名'}${ext}`, URL.createObjectURL(blob));
+  fileSaver(`${name || '未命名文件'}${ext}`, URL.createObjectURL(blob));
 }

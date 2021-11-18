@@ -1,7 +1,7 @@
 <template>
   <div class="container pt-8 pb-4">
     <h1 class="text-2xl font-semibold">文件夹</h1>
-    <p class="text-gray-600 dark:text-gray-200">持续执行工作流程</p>
+    <p class="text-gray-600 dark:text-gray-200">持续执行工作流</p>
     <div class="flex items-center my-6 space-x-4">
       <ui-input
         v-model="query"
@@ -75,7 +75,7 @@ function newCollection() {
     onConfirm: (name) => {
       Collection.insert({
         data: {
-          name: name || '未命名',
+          name: name || '未命名文件夹',
           createdAt: Date.now(),
         },
       });

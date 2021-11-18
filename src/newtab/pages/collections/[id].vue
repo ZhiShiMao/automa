@@ -10,7 +10,9 @@
           font-semibold
           bg-transparent
         "
-        @blur="updateCollection({ name: $event.target.value || '未命名' })"
+        @blur="
+          updateCollection({ name: $event.target.value || '未命名工作流' })
+        "
       />
       <div class="flex-grow"></div>
       <ui-button variant="accent" class="mr-4" @click="executeCollection">
@@ -27,12 +29,12 @@
       >
         <ui-input
           v-model="state.query"
-          placeholder="搜索流程"
+          placeholder="搜索工作流"
           class="w-full space-x-1 mb-3"
           prepend-icon="riSearch2Line"
         />
         <ui-tabs v-model="state.sidebarTab" fill class="w-full mb-4">
-          <ui-tab value="workflows">流程</ui-tab>
+          <ui-tab value="workflows">工作流</ui-tab>
           <ui-tab value="blocks">节点</ui-tab>
         </ui-tabs>
         <draggable
@@ -60,10 +62,10 @@
             v-model="state.activeTab"
             class="border-none h-full space-x-1"
           >
-            <ui-tab value="flow">流程</ui-tab>
-            <ui-tab value="logs">记录</ui-tab>
+            <ui-tab value="flow">工作流</ui-tab>
+            <ui-tab value="logs">执行记录</ui-tab>
             <ui-tab value="running">
-              流程执行
+              工作流执行
               <span
                 v-if="runningCollection.length > 0"
                 class="
@@ -102,7 +104,7 @@
                 p-4
               "
             >
-              将流程或节点拖拽到这里
+              将工作流或节点拖拽到这里
             </div>
             <draggable
               :model-value="collectionFlow"

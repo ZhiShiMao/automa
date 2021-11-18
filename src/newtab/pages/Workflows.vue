@@ -1,6 +1,6 @@
 <template>
   <div class="container pt-8 pb-4">
-    <h1 class="text-2xl font-semibold mb-6">流程</h1>
+    <h1 class="text-2xl font-semibold mb-6">工作流</h1>
     <div class="flex items-center mb-6 space-x-4">
       <ui-input
         v-model="state.query"
@@ -26,15 +26,15 @@
       </div>
       <ui-button @click="importWorkflow">
         <v-remixicon name="riUploadLine" class="mr-2 -ml-1" />
-        导入流程
+        导入工作流
       </ui-button>
-      <ui-button variant="accent" @click="newWorkflow"> 新建流程 </ui-button>
+      <ui-button variant="accent" @click="newWorkflow"> 新建工作流 </ui-button>
     </div>
     <div v-if="Workflow.all().length === 0" class="py-12 flex items-center">
       <img src="@/assets/svg/alien.svg" class="w-96" />
       <div class="ml-4">
-        <h1 class="text-2xl font-semibold max-w-md mb-6">暂无任何流程</h1>
-        <ui-button variant="accent" @click="newWorkflow">新建流程</ui-button>
+        <h1 class="text-2xl font-semibold max-w-md mb-6">暂无任何工作流</h1>
+        <ui-button variant="accent" @click="newWorkflow">新建工作流</ui-button>
       </div>
     </div>
     <div v-else class="grid gap-4 grid-cols-5 2xl:grid-cols-6">
@@ -89,13 +89,13 @@ function executeWorkflow(workflow) {
 }
 function newWorkflow() {
   dialog.prompt({
-    title: '新建流程',
-    placeholder: '流程名称',
-    okText: '添加流程',
+    title: '新建工作流',
+    placeholder: '工作流名称',
+    okText: '添加工作流',
     onConfirm: (name) => {
       Workflow.insert({
         data: {
-          name: name || '未命名',
+          name: name || '未命名工作流',
           createdAt: Date.now(),
         },
       });
@@ -104,9 +104,9 @@ function newWorkflow() {
 }
 function deleteWorkflow({ name, id }) {
   dialog.confirm({
-    title: '删除流程',
+    title: '删除工作流',
     okVariant: 'danger',
-    body: `确定要删除 "${name}" 流程？`,
+    body: `确定要删除 "${name}" 工作流？`,
     onConfirm: () => {
       Workflow.delete(id);
     },
@@ -114,8 +114,8 @@ function deleteWorkflow({ name, id }) {
 }
 function renameWorkflow({ id, name }) {
   dialog.prompt({
-    title: '重命名流程',
-    placeholder: '流程名称',
+    title: '重命名工作流',
+    placeholder: '工作流名称',
     okText: '重命名',
     inputValue: name,
     onConfirm: (newName) => {
@@ -130,9 +130,9 @@ function renameWorkflow({ id, name }) {
 }
 
 const menuHandlers = {
-  "导出": exportWorkflow,
-  "重命名": renameWorkflow,
-  "删除": deleteWorkflow,
+  导出: exportWorkflow,
+  重命名: renameWorkflow,
+  删除: deleteWorkflow,
 };
 </script>
 <style>

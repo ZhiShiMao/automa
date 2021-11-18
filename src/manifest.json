@@ -1,8 +1,10 @@
 {
   "manifest_version": 2,
-  "name": "自动化流程",
+  "name": "自动化工作流",
   "background": {
-    "scripts": ["background.bundle.js"],
+    "scripts": [
+      "background.bundle.js"
+    ],
     "persistent": false
   },
   "browser_action": {
@@ -14,11 +16,21 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["shortcut.bundle.js"],
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "shortcut.bundle.js"
+      ],
       "run_at": "document_end",
       "all_frames": false
     }
   ],
-  "permissions": ["tabs", "alarms", "storage", "unlimitedStorage", "<all_urls>"]
+  "permissions": [
+    "tabs",
+    "alarms",
+    "storage",
+    "unlimitedStorage",
+    "<all_urls>"
+  ]
 }

@@ -27,9 +27,9 @@
       <div class="absolute px-3 rounded-lg bg-white z-10 left-0 m-4 top-0">
         <ui-tabs v-model="activeTab" class="border-none h-full space-x-1">
           <ui-tab value="editor">编辑器</ui-tab>
-          <ui-tab value="logs">记录</ui-tab>
+          <ui-tab value="logs">执行记录</ui-tab>
           <ui-tab value="running" class="flex items-center">
-            流程执行
+            工作流执行
             <span
               v-if="workflowState.length > 0"
               class="
@@ -313,9 +313,9 @@ function handleEditorDataChanged() {
 }
 function deleteWorkflow() {
   dialog.confirm({
-    title: '删除流程',
+    title: '删除工作流',
     okVariant: 'danger',
-    body: `确定要删除 "${workflow.value.name}" 流程吗？`,
+    body: `确定要删除 "${workflow.value.name}" 工作流吗？`,
     onConfirm: () => {
       Workflow.delete(route.params.id).then(() => {
         router.replace('/workflows');
@@ -325,8 +325,8 @@ function deleteWorkflow() {
 }
 function renameWorkflow() {
   dialog.prompt({
-    title: '重命名流程',
-    placeholder: '流程名称',
+    title: '重命名工作流',
+    placeholder: '工作流名称',
     okText: '重命名',
     inputValue: workflow.value.name,
     onConfirm: (newName) => {

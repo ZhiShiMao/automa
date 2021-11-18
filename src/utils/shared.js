@@ -368,7 +368,7 @@ export const tasks = {
   },
   'element-exists': {
     name: '元素存在',
-    description: '根据元素是否存在执行下一步的流程',
+    description: '根据元素是否存在执行下一步的工作流',
     icon: 'riFocus3Line',
     component: 'BlockElementExists',
     editComponent: 'EditElementExists',

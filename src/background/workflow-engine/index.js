@@ -1,11 +1,11 @@
 /* eslint-disable no-underscore-dangle */
 
+import browser from 'webextension-polyfill';
+import { nanoid } from 'nanoid';
 import * as blocksHandler from './blocks-handler';
 
-import browser from 'webextension-polyfill';
 import errorMessage from './error-message';
 import executeContentScript from '@/utils/execute-content-script';
-import { nanoid } from 'nanoid';
 import referenceData from '@/utils/reference-data';
 import { tasks } from '@/utils/shared';
 import { toCamelCase } from '@/utils/helper';
@@ -284,7 +284,7 @@ class WorkflowEngine {
           } else {
             this.logs.push({
               type: 'finish',
-              message: '流程执行完成',
+              message: '工作流执行完成',
               name: '完成',
             });
             this.dispatchEvent('finish');
