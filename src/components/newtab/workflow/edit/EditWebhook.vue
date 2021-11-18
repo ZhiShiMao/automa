@@ -55,7 +55,7 @@
           />
           <ui-input
             v-model="items.value"
-            placeholder="Value"
+            placeholder="值"
             type="text"
             class="col-span-3"
           />

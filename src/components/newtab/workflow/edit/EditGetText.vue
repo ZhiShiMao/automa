@@ -4,7 +4,7 @@
       <span>/</span>
       <input
         :value="data.regex"
-        placeholder="Regex"
+        placeholder="正则表达式"
         class="w-11/12 bg-transparent p-2 focus:ring-0"
         @change="updateData({ regex: $event.target.value })"
       />
@@ -35,7 +35,7 @@
     <div v-if="data.saveData" class="flex items-center mt-1">
       <ui-select
         :model-value="data.dataColumn"
-        placeholder="Data column"
+        placeholder="数据列"
         class="mr-2 flex-1"
         @change="updateData({ dataColumn: $event })"
       >

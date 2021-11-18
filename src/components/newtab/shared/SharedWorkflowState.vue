@@ -17,7 +17,7 @@
         v-if="data.state.tabId"
         icon
         class="mr-2"
-        title="Open tab"
+        title="打开标签"
         @click="openTab"
       >
         <v-remixicon name="riExternalLinkLine" />

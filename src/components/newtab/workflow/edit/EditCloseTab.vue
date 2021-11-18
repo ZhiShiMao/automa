@@ -5,7 +5,7 @@
         :model-value="data.activeTab"
         @change="updateData({ activeTab: $event })"
       >
-        Close active tab
+        关闭激活状态的标签
       </ui-checkbox>
     </div>
     <ui-input
@@ -15,7 +15,7 @@
       @change="updateData({ url: $event })"
     >
       <template #label>
-        URL or match pattern
+        URL或匹配模式
         <a
           href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns"
           target="_blank"

@@ -17,7 +17,7 @@
             name="riCalendarLine"
             class="mr-2 inline-block align-middle"
           />
-          <span :title="formatDate(log.startedAt, 'DD MMM YYYY, hh:mm A')">
+          <span :title="formatDate(log.startedAt, 'YYYY-MM-DD hh:mm:ss A')">
             {{ formatDate(log.startedAt, 'relative') }}
           </span>
         </td>

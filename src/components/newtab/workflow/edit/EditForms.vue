@@ -3,7 +3,7 @@
     <ui-select
       :model-value="data.type"
       class="block w-full mt-4 mb-3"
-      placeholder="Form type"
+      placeholder="表单类型"
       @change="updateData({ type: $event })"
     >
       <option v-for="form in forms" :key="form.id" :value="form.id">
@@ -15,12 +15,12 @@
       :model-value="data.selected"
       @change="updateData({ selected: $event })"
     >
-      Selected
+      选中
     </ui-checkbox>
     <template v-if="data.type === 'text-field' || data.type === 'select'">
       <ui-textarea
         :model-value="data.value"
-        placeholder="Value"
+        placeholder="值"
         class="w-full"
         @change="updateData({ value: $event })"
       />
@@ -29,14 +29,14 @@
         class="mb-1 ml-1"
         @change="updateData({ clearValue: $event })"
       >
-        Clear form value
+        清除表单值
       </ui-checkbox>
     </template>
     <ui-input
       v-if="data.type === 'text-field'"
       :model-value="data.delay"
-      label="Typing delay (millisecond)(0 to disable)"
-      placeholder="Delay"
+      label="键入延迟（毫秒）（0表示禁用）"
+      placeholder="延时时长"
       class="w-full"
       min="0"
       type="number"
@@ -56,10 +56,10 @@ const props = defineProps({
 const emit = defineEmits(['update:data']);
 
 const forms = [
-  { id: 'text-field', name: 'Text field' },
-  { id: 'select', name: 'Select' },
-  { id: 'checkbox', name: 'Checkbox' },
-  { id: 'radio', name: 'Radio' },
+  { id: 'text-field', name: '文本输入框' },
+  { id: 'select', name: '多选' },
+  { id: 'checkbox', name: '选择框' },
+  { id: 'radio', name: '单选' },
 ];
 
 function updateData(value) {

@@ -64,8 +64,8 @@
       </router-link>
     </div>
     <div class="flex-grow"></div>
-    <!--<a
-      v-tooltip:right="'Documentation'"
+    <a
+      v-tooltip:right="'文档'"
       href="https://github.com/kholid060/automa/wiki"
       rel="noopener"
       class="mb-8"
@@ -80,7 +80,7 @@
       target="_blank"
     >
       <v-remixicon name="riGithubFill" />
-    </a>-->
+    </a>
   </aside>
 </template>
 <script setup>
