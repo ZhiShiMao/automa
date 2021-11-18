@@ -101,7 +101,7 @@ const tabs = [
     path: '/workflows',
   },
   {
-    name: '集合',
+    name: '文件夹',
     icon: 'riFolderLine',
     path: '/collections',
   },

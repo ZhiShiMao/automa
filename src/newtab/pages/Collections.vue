@@ -1,6 +1,6 @@
 <template>
   <div class="container pt-8 pb-4">
-    <h1 class="text-2xl font-semibold">集合</h1>
+    <h1 class="text-2xl font-semibold">文件夹</h1>
     <p class="text-gray-600 dark:text-gray-200">持续执行工作流程</p>
     <div class="flex items-center my-6 space-x-4">
       <ui-input
@@ -9,7 +9,9 @@
         placeholder="搜索 ..."
         class="flex-1"
       />
-      <ui-button variant="accent" @click="newCollection"> 创建集合 </ui-button>
+      <ui-button variant="accent" @click="newCollection">
+        创建文件夹
+      </ui-button>
     </div>
     <div
       v-if="Collection.query().count() === 0"
@@ -17,9 +19,9 @@
     >
       <img src="@/assets/svg/alien.svg" class="w-96" />
       <div class="ml-4">
-        <h1 class="text-2xl font-semibold max-w-md mb-6">暂无任何集合</h1>
+        <h1 class="text-2xl font-semibold max-w-md mb-6">暂无任何文件夹</h1>
         <ui-button variant="accent" @click="newCollection">
-          创建集合
+          创建文件夹
         </ui-button>
       </div>
     </div>
@@ -67,9 +69,9 @@ function executeCollection(collection) {
 }
 function newCollection() {
   dialog.prompt({
-    title: '创建集合',
-    placeholder: '集合名称',
-    okText: '添加集合',
+    title: '创建文件夹',
+    placeholder: '文件夹名称',
+    okText: '添加文件夹',
     onConfirm: (name) => {
       Collection.insert({
         data: {
@@ -82,7 +84,7 @@ function newCollection() {
 }
 function renameCollection({ id, name }) {
   dialog.prompt({
-    title: '重命名集合',
+    title: '重命名文件夹',
     placeholder: 'Collection name',
     okText: '重命名',
     inputValue: name,
@@ -98,7 +100,7 @@ function renameCollection({ id, name }) {
 }
 function deleteCollection({ name, id }) {
   dialog.confirm({
-    title: '删除集合',
+    title: '删除文件夹',
     okVariant: 'danger',
     body: `确实要上删除 "${name}" 结合吗？`,
     onConfirm: () => {

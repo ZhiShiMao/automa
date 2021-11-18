@@ -188,7 +188,7 @@
           </ui-tab-panel>
           <ui-tab-panel value="options">
             <ui-checkbox v-model="collectionOptions.atOnce">
-              <p class="leading-tight">一次执行集合中的所有工作流</p>
+              <p class="leading-tight">一次执行文件夹中的所有工作流</p>
               <p class="text-sm text-gray-600 leading-tight">
                 使用此选项时不会执行节点
               </p>
@@ -219,7 +219,7 @@ const blocks = {
     id: 'export-result',
     icon: 'riDownloadLine',
     name: '导出结果',
-    description: '将集合结果导出为JSON',
+    description: '将文件夹结果导出为JSON',
     data: {
       type: 'json',
     },
@@ -312,9 +312,9 @@ function deleteCollectionFlow(index) {
 }
 function deleteCollection() {
   dialog.confirm({
-    title: '删除集合',
+    title: '删除文件夹',
     okVariant: 'danger',
-    body: '确定要删除当前集合吗？',
+    body: '确定要删除当前文件夹吗？',
     onConfirm: () => {
       Collection.delete(route.params.id).then(() => {
         router.replace('/collections');
