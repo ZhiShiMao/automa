@@ -1,4 +1,5 @@
 /* to-do screenshot, looping, cookies, assets, tab loaded, opened tab, and run workflow block? */
+import { categories as xmlCategories, tasks as xmlTasks } from './shared-xml';
 
 export const tasks = {
   trigger: {
@@ -455,6 +456,7 @@ export const tasks = {
       windowType: 'main-window',
     },
   },
+  ...xmlTasks,
 };
 
 export const categories = {
@@ -474,6 +476,7 @@ export const categories = {
     name: '条件',
     color: 'bg-blue-200',
   },
+  ...xmlCategories,
 };
 
 export const eventList = [

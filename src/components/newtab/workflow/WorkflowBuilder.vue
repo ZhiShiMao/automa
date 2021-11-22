@@ -177,7 +177,7 @@ export default {
 </script>
 <style>
 #drawflow {
-  /* background-image: url('@/assets/images/tile.png'); */
+  background-image: url('@/assets/images/tile.png');
   background-size: 35px;
 }
 </style>
