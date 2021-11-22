@@ -8,7 +8,7 @@
     <slot></slot>
     <div class="absolute z-10 p-4 bottom-0 left-0">
       <button
-        v-tooltip.group="'Reset zoom'"
+        v-tooltip.group="'重置'"
         class="p-2 rounded-lg bg-white mr-2"
         @click="editor.zoom_reset()"
       >
@@ -16,7 +16,7 @@
       </button>
       <div class="rounded-lg bg-white inline-block">
         <button
-          v-tooltip.group="'Zoom out'"
+          v-tooltip.group="'缩小'"
           class="p-2 rounded-lg relative z-10"
           @click="editor.zoom_out()"
         >
@@ -24,7 +24,7 @@
         </button>
         <hr class="h-6 border-r inline-block" />
         <button
-          v-tooltip.group="'Zoom in'"
+          v-tooltip.group="'放大'"
           class="p-2 rounded-lg"
           @click="editor.zoom_in()"
         >
@@ -177,7 +177,7 @@ export default {
 </script>
 <style>
 #drawflow {
-  background-image: url('@/assets/images/tile.png');
+  /* background-image: url('@/assets/images/tile.png'); */
   background-size: 35px;
 }
 </style>

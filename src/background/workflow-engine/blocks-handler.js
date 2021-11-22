@@ -8,11 +8,24 @@ import dataExporter, { generateJSON } from '@/utils/data-exporter';
 import compareBlockValue from '@/utils/compare-block-value';
 import errorMessage from './error-message';
 
+/**
+ * 获取下一个节点ID
+ * @param {*} block 当前节点
+ * @param {*} index 序号
+ * @returns
+ */
 function getBlockConnection(block, index = 1) {
   const blockId = block.outputs[`output_${index}`]?.connections[0]?.node;
 
   return blockId;
 }
+
+/**
+ * 转换数据
+ * @param {*} data 数据
+ * @param {*} type 类型
+ * @returns
+ */
 function convertData(data, type) {
   let result = data;
 
@@ -28,6 +41,13 @@ function convertData(data, type) {
 
   return result;
 }
+
+/**
+ * 生成节点执行错误
+ * @param {*} block 节点
+ * @param {*} code 代码
+ * @returns
+ */
 function generateBlockError(block, code) {
   const message = errorMessage(code || 'no-tab', tasks[block.name]);
   const error = new Error(message);
@@ -36,6 +56,11 @@ function generateBlockError(block, code) {
   return error;
 }
 
+/**
+ * 关闭标签
+ * @param {*} block 节点
+ * @returns
+ */
 export async function closeTab(block) {
   const nextBlockId = getBlockConnection(block);
 
@@ -64,6 +89,12 @@ export async function closeTab(block) {
     throw error;
   }
 }
+
+/**
+ * 触发器
+ * @param {*} block 节点
+ * @returns
+ */
 export async function trigger(block) {
   const nextBlockId = getBlockConnection(block);
   try {
