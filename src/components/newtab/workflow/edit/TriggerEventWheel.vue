@@ -3,7 +3,7 @@
     <ui-input v-model="defaultParams.deltaX" type="number" label="deltaX" />
     <ui-input v-model="defaultParams.deltaY" type="number" label="deltaY" />
     <ui-input
-      v-model="defaultParams.deltaX"
+      v-model="defaultParams.deltaZ"
       type="number"
       class="col-span-2"
       label="deltaZ"

@@ -17,7 +17,7 @@
     />
     <ui-select
       :model-value="data.contentType"
-      placeholder="Select a content type"
+      placeholder="选择请求的内容类型"
       class="mb-2 w-full"
       @change="updateData({ contentType: $event })"
     >
@@ -49,7 +49,7 @@
         <template v-for="(items, index) in headerRef" :key="index">
           <ui-input
             v-model="items.name"
-            :placeholder="`Header ${index + 1}`"
+            :placeholder="`属性 ${index + 1}`"
             type="text"
             class="col-span-3"
           />
@@ -85,7 +85,7 @@
     <ui-modal
       v-model="showContentModalRef"
       content-class="max-w-3xl"
-      title="Content Body"
+      title="请求体"
     >
       <prism-editor
         v-model="contentRef"
